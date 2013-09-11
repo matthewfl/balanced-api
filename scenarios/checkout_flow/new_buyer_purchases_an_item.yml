@@ -4,6 +4,8 @@ scenarios:
 
   # Tokenize card using balanced.js or by POSTing directly from mobile app
   - name: new_card_failing_avs
+    options:
+      - no-secret-key
     request:
       method: POST
       href: /cards
@@ -24,7 +26,7 @@ scenarios:
       }
     response:
       schema:
-        "$ref": "responses/cards.json"
+        "$ref": "responses/card_tokens.json"
       status_code: 201
 
   # Verify that address and CVV match
@@ -44,6 +46,8 @@ scenarios:
 
   # Tokenize another card using balanced.js or by POSTing directly from mobile app
   - name: new_card
+    options:
+      - no-secret-key
     request:
       method: POST
       href: /cards
@@ -65,7 +69,7 @@ scenarios:
       }
     response:
       schema:
-        "$ref": "responses/cards.json"
+        "$ref": "responses/card_tokens.json"
       status_code: 201
 
   # Verify that address and CVV match
