@@ -1,0 +1,12 @@
+require:
+  - ../cards/add_to_customer.yml
+scenarios:
+  - name: check_customer
+    request:
+      method: GET
+      href: "{customer,customers.href}"
+    response:
+      status_code: 200
+      schema:
+        "$ref": "responses/customers.json"
+      matches: { "customers": [ { "links": { "destination": null, "source": null } } ] }
