@@ -28,7 +28,13 @@
                     "format": "uri",
                     "pattern": "/resources/{credits.destination}",
                     "required": true
-                }
+                },
+		"credits.events": {
+		    "type": "string",
+		    "format": "uri",
+		    "pattern": "/credits/{credits.id}/events",
+		    "required": true
+		}
             },
             "required": false
         },

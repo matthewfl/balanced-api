@@ -22,7 +22,7 @@ scenarios:
     response:
       status_code: 404
       schema:
-        "$ref": "responses/errors.json"
+        "$ref": "responses/_models/error.json"
       matches: {
         "category_code": "not-found"
       }

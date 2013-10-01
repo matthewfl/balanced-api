@@ -63,4 +63,4 @@ scenarios:
       status_code: 409
       schema:
         "$ref": "responses/errors.json"
-      assertRegex: { "description": "^Funding instrument cannot be debited" }
+      assertRegex: { "errors":[{"description": "^Funding instrument cannot be debited"}] }

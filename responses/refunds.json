@@ -16,7 +16,13 @@
                     "format": "uri",
                     "pattern": "/orders/{refunds.order}",
                     "required": true
-                }
+                },
+		"refunds.events": {
+		    "type": "string",
+		    "format": "uri",
+		    "pattern": "/refunds/{refunds.id}/events",
+		    "required": true
+		}
             },
             "required": false
         },

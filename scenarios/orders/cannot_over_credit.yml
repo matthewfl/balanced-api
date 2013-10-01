@@ -42,8 +42,8 @@ scenarios:
       status_code: 409
       shcema:
         "$ref": "responses/errors.json"
-      assertRegex: { "description": ".*is insufficient to cover transfer of 2000.*" }
-      matches: { "category_code": "account-insufficient-funds" }
+      assertRegex: { "errors":[{"description": ".* has insufficient funds to cover a transfer of 2000.*"}] }
+      matches: { "errors":[{"category_code": "insufficient-funds"}] }
 
   - name: check_order_escrow_2
     request:

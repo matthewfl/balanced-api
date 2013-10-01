@@ -28,7 +28,13 @@
                     "format": "uri",
                     "pattern": "/resources/{debits.source}",
                     "required": true
-                }
+                },
+		"debits.events": {
+		    "type": "string",
+		    "format": "uri",
+		    "pattern": "/debits/{debits.id}/events",
+		    "required": true
+		}
             },
             "required": false
         },

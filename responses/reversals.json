@@ -16,7 +16,13 @@
                     "format": "uri",
                     "pattern": "/orders/{reversals.order}",
                     "required": true
-                }
+                },
+		"reversals.events": {
+		    "type": "string",
+		    "format": "uri",
+		    "pattern": "/reversals/{reversals.id}/events",
+		    "required": true
+		}
             },
             "required": false
         },

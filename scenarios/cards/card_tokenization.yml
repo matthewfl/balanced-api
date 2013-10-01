@@ -120,8 +120,8 @@ scenarios:
       schema:
         "$ref": "responses/errors.json"
       status_code: 409
-      matches: { "category_code": "card-not-validated" }
-      assertRegex: { "description": "^Card cannot be validated" }
+      matches: { "errors":[{"category_code": "card-not-validated"}] }
+      assertRegex: { "errors":[{"description": "^Card cannot be validated"}] }
 
   - name: unstore_card
     request:

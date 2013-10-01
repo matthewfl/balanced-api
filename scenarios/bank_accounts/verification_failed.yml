@@ -42,7 +42,7 @@ scenarios:
       status_code: 409
       schema:
         "$ref": "responses/errors.json"
-      assertRegex: { "description": "Authentication amounts do not match" }
+      assertRegex: { "errors":[{"description": "Authentication amounts do not match"}] }
 
   - name: submit_verification2
     request:
@@ -58,7 +58,7 @@ scenarios:
       status_code: 409
       schema:
         "$ref": "responses/errors.json"
-      assertRegex: { "description": "Authentication amounts do not match" }
+      assertRegex: { "errors":[{"description": "Authentication amounts do not match"}] }
 
   - name: submit_verification3
     request:
@@ -74,7 +74,7 @@ scenarios:
       status_code: 409
       schema:
         "$ref": "responses/errors.json"
-      assertRegex: { "description": "Authentication amounts do not match" }
+      assertRegex: { "errors":[{"description": "Authentication amounts do not match"}] }
 
 
   - name: check_verification
